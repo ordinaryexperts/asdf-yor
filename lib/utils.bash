@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for yor.
+set -x
+
 GH_REPO="https://github.com/bridgecrewio/yor"
 TOOL_NAME="yor"
 TOOL_TEST="yor --version"
@@ -42,7 +43,8 @@ download_release() {
   filename="$2"
 
   # TODO: Adapt the release URL convention for yor
-  url="$GH_REPO/archive/v${version}.tar.gz"
+  url="$GH_REPO/releases/download/${version}/yor_${version}_linux_amd64.tar.gz"
+  # https://github.com/bridgecrewio/yor/releases/download/0.1.129/yor_0.1.129_linux_amd64.tar.gz
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
@@ -58,8 +60,9 @@ install_version() {
   fi
 
   (
-    mkdir -p "$install_path"
-    cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
+    mkdir -p "$install_path"/bin
+    cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"/bin
+    chmod +x $install_path/bin/yor
 
     # TODO: Asert yor executable exists.
     local tool_cmd

@@ -32,7 +32,6 @@ list_github_tags() {
 }
 
 list_all_versions() {
-  # TODO: Adapt this. By default we simply list the tag names from GitHub releases.
   # Change this function if yor has other means of determining installable versions.
   list_github_tags
 }
@@ -42,9 +41,7 @@ download_release() {
   version="$1"
   filename="$2"
 
-  # TODO: Adapt the release URL convention for yor
   url="$GH_REPO/releases/download/${version}/yor_${version}_linux_amd64.tar.gz"
-  # https://github.com/bridgecrewio/yor/releases/download/0.1.129/yor_0.1.129_linux_amd64.tar.gz
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
@@ -64,7 +61,6 @@ install_version() {
     cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"/bin
     chmod +x $install_path/bin/yor
 
-    # TODO: Asert yor executable exists.
     local tool_cmd
     tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
     test -x "$install_path/bin/$tool_cmd" || fail "Expected $install_path/bin/$tool_cmd to be executable."

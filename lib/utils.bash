@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-set -x
-
 GH_REPO="https://github.com/bridgecrewio/yor"
 TOOL_NAME="yor"
 TOOL_TEST="yor --version"

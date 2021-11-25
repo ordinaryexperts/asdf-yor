@@ -28,8 +28,6 @@
 Plugin:
 
 ```shell
-asdf plugin add yor
-# or
 asdf plugin add yor https://github.com/jmcvetta/asdf-yor.git
 ```
 

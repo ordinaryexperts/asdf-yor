@@ -6,7 +6,7 @@
 [![Build](https://github.com/jmcvetta/asdf-yor/actions/workflows/build.yml/badge.svg)](https://github.com/jmcvetta/asdf-yor/actions/workflows/build.yml) [![Lint](https://github.com/jmcvetta/asdf-yor/actions/workflows/lint.yml/badge.svg)](https://github.com/jmcvetta/asdf-yor/actions/workflows/lint.yml)
 
 
-[yor](https://yor.io) plugin for the [asdf version manager](https://asdf-vm.com).
+[Yor](https://yor.io) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 

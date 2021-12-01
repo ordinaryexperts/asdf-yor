@@ -59,7 +59,6 @@ get_arch() {
   fi
 }
 
-
 download_release() {
   local version filename url
   version="$1"
@@ -67,7 +66,6 @@ download_release() {
 
   local -r platform="$(get_platform)"
   local -r arch="$(get_arch)"
-
 
   url="$GH_REPO/releases/download/${version}/yor_${version}_${platform}_${arch}.tar.gz"
 

@@ -34,12 +34,42 @@ list_all_versions() {
   list_github_tags
 }
 
+get_platform() {
+  local -r kernel="$(uname -s)"
+  if [[ $OSTYPE == "msys" || $kernel == "CYGWIN"* || $kernel == "MINGW"* ]]; then
+    echo windows
+  else
+    uname | tr '[:upper:]' '[:lower:]'
+  fi
+}
+
+get_arch() {
+  local -r machine="$(uname -m)"
+  OVERWRITE_ARCH=${ASDF_HASHICORP_OVERWRITE_ARCH:-"false"}
+  if [[ $OVERWRITE_ARCH != "false" ]]; then
+    echo "$OVERWRITE_ARCH"
+  elif [[ $machine == "arm64" ]] || [[ $machine == "aarch64" ]]; then
+    echo "arm64"
+  elif [[ $machine == *"arm"* ]] || [[ $machine == *"aarch"* ]]; then
+    echo "arm"
+  elif [[ $machine == *"386"* ]]; then
+    echo "386"
+  else
+    echo "amd64"
+  fi
+}
+
+
 download_release() {
   local version filename url
   version="$1"
   filename="$2"
 
-  url="$GH_REPO/releases/download/${version}/yor_${version}_linux_amd64.tar.gz"
+  local -r platform="$(get_platform)"
+  local -r arch="$(get_arch)"
+
+
+  url="$GH_REPO/releases/download/${version}/yor_${version}_${platform}_${arch}.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"

@@ -21,7 +21,7 @@
 # Dependencies
 
 - `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
+
 
 # Install
 
@@ -50,11 +50,13 @@ yor --version
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
 install & manage versions.
 
+
 # Contributing
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
 [Thanks goes to these contributors](https://github.com/jmcvetta/asdf-yor/graphs/contributors)!
+
 
 # License
 

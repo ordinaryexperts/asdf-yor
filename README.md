@@ -26,7 +26,7 @@
 Plugin:
 
 ```shell
-asdf plugin add yor https://github.com/jmcvetta/asdf-yor.git
+asdf plugin add yor https://github.com/ordinaryexperts/asdf-yor.git
 ```
 
 yor:

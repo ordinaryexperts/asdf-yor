@@ -6,9 +6,6 @@
 
 [![Build](https://github.com/jmcvetta/asdf-yor/actions/workflows/build.yml/badge.svg)](https://github.com/jmcvetta/asdf-yor/actions/workflows/build.yml) [![Lint](https://github.com/jmcvetta/asdf-yor/actions/workflows/lint.yml/badge.svg)](https://github.com/jmcvetta/asdf-yor/actions/workflows/lint.yml)
 
-[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-
-
 </div>
 
 # Contents
@@ -52,6 +49,8 @@ install & manage versions.
 
 
 # Contributing
+
+[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 

@@ -1,0 +1,30 @@
+{
+  "name": "asdf-yor",
+  "version": "0.0.0",
+  "description": "Yor plugin for Asdf version manager",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.2"
+  },
+  "scripts": {
+    "test": "asdf plugin test yor https://github.com/ordinaryexperts/asdf-yor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ordinaryexperts/asdf-yor.git"
+  },
+  "keywords": [
+    "asdf",
+    "yor"
+  ],
+  "author": "Jason McVetta <jason.mcvetta@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ordinaryexperts/asdf-yor/issues"
+  },
+  "homepage": "https://github.com/ordinaryexperts/asdf-yor#readme"
+}

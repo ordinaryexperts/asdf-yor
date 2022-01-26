@@ -4,7 +4,8 @@
 
 [Yor](https://yor.io) plugin for the [asdf version manager](https://asdf-vm.com).
 
-[![Build](https://github.com/jmcvetta/asdf-yor/actions/workflows/build.yml/badge.svg)](https://github.com/jmcvetta/asdf-yor/actions/workflows/build.yml) [![Lint](https://github.com/jmcvetta/asdf-yor/actions/workflows/lint.yml/badge.svg)](https://github.com/jmcvetta/asdf-yor/actions/workflows/lint.yml)
+[![Build](https://github.com/ordinaryexperts/asdf-yor/actions/workflows/build.yml/badge.svg)](https://github.com/ordinaryexperts/asdf-yor/actions/workflows/build.yml)
+[![Lint](https://github.com/ordinaryexperts/asdf-yor/actions/workflows/lint.yml/badge.svg)](https://github.com/ordinaryexperts/asdf-yor/actions/workflows/lint.yml)
 
 </div>
 

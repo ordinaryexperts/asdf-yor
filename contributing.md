@@ -10,3 +10,5 @@ asdf plugin test yor https://github.com/jmcvetta/asdf-yor.git "yor --version"
 ```
 
 Tests are automatically run in GitHub Actions on push and PR.
+
+Releases are generated automatically based on commit messages, using [`semantic-release`](https://github.com/semantic-release/semantic-release). Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/) standard.

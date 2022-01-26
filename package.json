@@ -12,7 +12,7 @@
     "semantic-release": "^19.0.2"
   },
   "scripts": {
-    "test": "asdf plugin test yor https://github.com/ordinaryexperts/asdf-yor"
+    "test": "asdf plugin test yor https://github.com/ordinaryexperts/asdf-yor.git \"yor --version\""
   },
   "repository": {
     "type": "git",

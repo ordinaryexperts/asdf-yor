@@ -16,6 +16,7 @@
     "@semantic-release/github"
   ],
   "branches": [
-      "main"
+      "main",
+      "document-semantic-release"
   ]
 }
